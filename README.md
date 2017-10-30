@@ -1,7 +1,6 @@
 Build a blog with meanstack and mongodb
 =====
-
-A blog made out of the meanstack. Uses mongoose, angular, express and the node.js and the mongodbs for realz
+Mean Stack Booking
 
 
 #### Getting started
