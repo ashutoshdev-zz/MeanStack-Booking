@@ -1,0 +1,39 @@
+<section class="inner-bg">
+    <div class="smart-container">
+        <div class="container">  
+            <div class="heading">
+                <h1>Payment Details<span></span></h1><h1>        
+                </h1></div>  
+            <div class="detail table-responsive">
+                <table class="table table-bordered">  
+                    <tr> 
+                        <th style="width:2%;">S.NO</th>
+                        <th>Amount</th>
+                        <th>Payment Status</th>
+                        <th>Txn Status</th>
+                        <th>Order ID</th>
+                        <th>CH ID</th>
+                        <th>Description</th>
+                        <th>Currency</th>
+                        <th>Balance Transaction</th>
+                        <th>Created</th>
+                        <th style="width:8%;">Action</th>	  
+                    </tr>
+                    <tr ng-repeat='interest in AllPaymentList track by $index'>
+                        <td ng-class="'{{interest._id}}'">{{$index + 1}}</td>   
+                        <td>{{interest.amount / 100}} USD</td>  
+                        <td>{{interest.paid}}</td>
+                        <td>{{interest.status}}</td>
+                        <td>{{interest.order_id}}</td>
+                        <td>{{interest.ch_id}}</td>
+                        <td>{{interest.description}}</td>
+                        <td>{{interest.currency}}</td>
+                        <td>{{interest.balance_transaction}}</td>
+                        <td>{{interest.created| date}}</td>
+                        <td ><a class="btn btn-default" href="/trip/{{interest.trip_url}}" role="button">Viw Trip Details</a></td>
+                    </tr>
+                </table>
+            </div> 
+        </div>
+    </div>
+</section>

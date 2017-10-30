@@ -1,0 +1,38 @@
+<section class="inner-bg">
+    <div class="smart-container">
+        <div class="container">  
+            <div class="heading">
+                <h1>My Trip list<span></span></h1><h1>        
+                </h1></div>  
+            <div class="detail table-responsive">
+                <table class="table table-bordered">  
+                    <tr> 
+                        <th style="width:2%;">S.NO</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Added Role</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                        <th style="width:8%;">Action</th>	  
+                    </tr>                                      
+                    <tr ng-repeat='trip in AllTripList track by $index'>
+                        <td ng-class="'{{trip._id}}'">{{$index + 1}}</td>   
+                        <td>{{trip.title}} </td>  
+                        <td>{{trip.description}}</td>
+                        <td>{{trip.date}}</td>
+                        <td>{{trip.date_end}}</td>
+                        <td>{{trip.user_role}}</td>
+                        <td>{{trip.status==1 ? "Activate" : "DeActivate"}}</td>
+                        <td>{{trip.created_at | date}}</td>
+                        <td ><a class="btn btn-default" href="/trip/{{trip.paramal}}" role="button">Trip Details</a>
+                        <a class="btn btn-default" href="/home/#/allinterested/{{trip.paramal}}" role="button">Interested List</a>
+                        <a class="btn btn-default" href="/home/#/allpayment/{{trip.paramal}}" role="button">Total Payment</a>
+                        </td>
+                    </tr>
+                </table>
+            </div> 
+        </div>
+    </div>
+</section>

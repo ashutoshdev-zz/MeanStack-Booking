@@ -1,0 +1,38 @@
+<section class="inner-bg">
+  <div class="smart-container">
+  <div class="container">
+  
+  <div class="heading">
+          <h1>Interest Detail<span></span></h1><h1>        
+        </h1></div>
+  
+  <div class="detail table-responsive">
+  <table class="table table-bordered">
+  
+  <tr>
+  
+   <th style="width:2%;">S.NO</th>
+         <th>Trip Details</th>
+	 <th>Paid Status</th>
+	 <th style="width:8%;">Action</th>
+	  
+  
+  
+  </tr>
+  <tr ng-repeat='interest in AllInterestList track by $index'>
+  <td ng-class="'{{interest._id}}'">{{$index + 1}}</td>   
+  <td><a href="/trip/{{interest.trip_url}}">Viw Trip Details</a></td>
+     <td>{{interest.status==0 ? "UnPaid" : "Paid"}}</td>
+     <td ><a class="btn btn-default" href="/trip/{{interest.trip_url}}" role="button" ng-show="interest.status==0">Pay Now</a></td>
+  </tr>
+	  
+ 
+  
+  
+  
+</table>
+</div>
+  
+  </div>
+   </div>
+  </section>

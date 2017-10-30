@@ -1,0 +1,50 @@
+<div class="content-wrapper" ng-controller="AddPhotoCtrl">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Photo
+            <small>Add Photo</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin/dashboard#/photoList"><i class="fa fa-dashboard"></i>Photo</a></li>
+            <li class="active">Add Photo</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Add Photo</h3>
+                    </div>
+                    <div class="form-group">
+                        <div class="alert alert-success" ng-show="message">
+                            <strong ng-bind="message" ></strong> 
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <!-- form start -->
+                    <form role="form" ng-submit="addPhoto()">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Title</label>
+                                <input type="text" class="form-control" name='title' ng-model='photo.title' required="" placeholder="Title">
+                            </div> 
+                            <div class="col-lg-8 full-height">                                                     
+                            <img ng-src="{{imgshow}}" id="photo-id" ng-show="imgshow" width="50px;"/>
+                            <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this)" id="photo-upload"  required=""/>
+                            <p ng-show="loading">...UPLOADING...</p>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                            <input type="submit" name="submit" value="Add Photo" class='btn btn-primary'>                   
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

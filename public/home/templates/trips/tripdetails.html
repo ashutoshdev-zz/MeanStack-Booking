@@ -1,0 +1,130 @@
+<div class="inner-bg"  ng-controller="TripdetailCtrl">
+    <div class="smart-container">
+        <div class="container">
+            <div class="col-sm-12">
+                <div class="heading">
+                    <h1>Trips Details <span></span><h1>        
+                            </div>
+                            </div>
+                            <div class="container">
+                                <div class="all-post tripdetails">
+                                    <div class="row">
+
+                                        <div class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="gallery">
+                                                <div class="gallerybox"><img src="{{tripimg}}" alt="" class="main-img" /></div>
+                                                <ul>
+                                                    <li><img src="{{tripimg}}" alt="" style="width: 15%"/></li>
+                                                    <li><img src="{{tripimg1}}" alt="" style="width: 15%"/></li>
+                                                     <li><img src="{{tripimg2}}" alt="" style="width: 15%"/></li>
+                                                     <li><img src="{{tripimg3}}" alt="" style="width: 15%"/></li>
+                                                     <li><img src="{{tripimg4}}" alt="" style="width: 15%"/></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="gallery_product-box"> 
+
+                                                <div class="profile-decsr">
+                                                    <h1> {{title}} </h1>
+<!--                                                    <div class="headproductbox"> 
+                                                        <h4> 12 people interested  </h4>
+                                                        <a href="#"> INTERESTED </a>
+                                                    </div>-->
+
+                                                    <div class="whatwedo"> 
+                                                        <h2> What we'll do </h2>
+                                                        <p> {{description}}</p>
+                                                    </div>
+
+
+                                                    <div class="location"> 
+                                                        <h2> <i class="fa fa-map-marker" aria-hidden="true"></i> Location From: </h2>
+                                                        <p> {{locationfrom}} </p>
+                                                    </div>
+                                                   <div class="location"> 
+                                                        <h2> <i class="fa fa-map-marker" aria-hidden="true"></i> Location To: </h2>
+                                                        <p> {{locationto}} </p>
+                                                    </div>
+
+                                                    <div class="avadates"> 
+                                                        <h2> <i class="fa fa-calendar" aria-hidden="true"></i> Availible dates : </h2>
+                                                        <ul>
+                                                            <li> 
+                                                                <div class="date1"> 
+                                                                    <h5> {{date}} - {{date_end}} </h5> 
+                                                                    <p> {{msg_interest}} </p>
+                                                                </div>
+                                                                
+                                                                <div class="date2" ng-click="interested()" style="cursor: pointer" ng-show="nooftravellers!=paidstatus">INTERESTED</div>
+                                                               <div class="date2" style="cursor: pointer" ng-show="nooftravellers==paidstatus">INTERESTED FULL</div>
+                                                            </li>
+                                                        
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="price"> 
+                                                        <h2> <i class="fa fa-usd" aria-hidden="true"></i> Price(USD): </h2>
+                                                        <p>{{price_person}} / persons </p>
+                                                    </div>
+                                                  <div class="price"> 
+                                                        <h2> <i class="fa fa-usd" aria-hidden="true"></i>No Of all Person *: </h2>
+                                                        <p>{{nooftravellers}}  </p>
+                                                    </div>
+
+                                                    <div class="gotravel" ng-show="gender"> 
+                                                        <h2> <i class="fa fa-transgender-alt" aria-hidden="true"></i> Gender of travelers :  </h2>
+                                                        <p> {{gender=='both' ? "Male / Female " : gender}}</p>
+                                                    </div>
+
+                                                    <div class="hotelinfo" ng-show="accommodation"> 
+                                                        <h2> <i class="fa fa-bed" aria-hidden="true"></i> Hotel/Accommodation Name :  </h2>
+                                                        <p> {{accommodation}} </p>
+                                                        <h2> <i class="fa fa-bed" aria-hidden="true"></i> Hotel/Accommodation info :  </h2>
+                                                        <p> {{accommodation_info}} </p>
+<!--                                                        <ul>
+                                                            <li> 
+                                                                <div class="rating"> 
+                                                                    <a href="#"> <i class="fa fa-star" aria-hidden="true"></i></a>
+                                                                    <a href="#"> <i class="fa fa-star" aria-hidden="true"></i></a>
+                                                                    <a href="#"> <i class="fa fa-star" aria-hidden="true"></i></a>
+                                                                    <a href="#"> <i class="fa fa-star" aria-hidden="true"></i></a>
+                                                                    <a href="#"> <i class="fa fa-star" aria-hidden="true"></i></a>
+                                                                </div>
+                                                                <a href="#"> view hotel website</a>
+                                                            </li>
+
+                                                        </ul>-->
+                                                    </div>
+
+
+                                                    <div class="rentalcar" ng-show="rental_car"> 
+                                                        <h2> <i class="fa fa-car" aria-hidden="true"></i> Rental car? : </h2>
+                                                        <p> {{rental_car}} </p>
+               
+                                                    </div> 
+
+
+
+                                                  
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                     </div>
+                                 </div>
+             </div>
+         </div>
+     </div>
+
+<div class="modal fade" id="paypop">
+  <div class="modal-dialog modal-login" role="document">
+    <div class="modal-content">    
+      <div class="modal-footer">    
+          <button id="customButton" class="btn btn-secondary">Pay Now</button>
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Skip</button>
+      </div>
+    </div>
+  </div>
+</div>
